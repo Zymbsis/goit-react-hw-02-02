@@ -52,12 +52,12 @@ function App() {
   return (
     <div className="container">
       <Description />
-      <div className="button-wrapper">
+      <ul className="button-wrapper">
         <Options handleClick={handleClick}>Good</Options>
         <Options handleClick={handleClick}>Neutral</Options>
         <Options handleClick={handleClick}>Bad</Options>
         {clicks.total > 0 && <Options handleClick={handleClick}>Reset</Options>}
-      </div>
+      </ul>
       {clicks.total ? <Feedback rating={clicks} /> : <Notification />}
     </div>
   );
